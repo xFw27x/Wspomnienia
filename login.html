@@ -3,28 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie - Wspomnienia</title>
-    <!-- Łączymy nasz plik CSS -->
+    <title>Wspomnienia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <form class="login-form">
-            <h2>Zaloguj się</h2>
-            <div class="form-group">
-                <label for="email">Adres e-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Hasło</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <!-- Ten przycisk na razie nigdzie nie prowadzi -->
-            <button type="submit">Zaloguj</button>
-            <p class="register-link">
-                Nie masz konta? <a href="#">Zarejestruj się</a>
-            </p>
-        </form>
+
+    <!-- === SEKCJA LOGOWANIA === -->
+    <div id="login-view">
+        <div class="login-container">
+            <form class="login-form">
+                <h2>Zaloguj się</h2>
+                <div class="form-group">
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Hasło</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <!-- Zmieniony przycisk - po kliknięciu będzie pokazywał oś czasu -->
+                <button type="button" id="login-button">Zaloguj</button>
+                <p class="register-link">
+                    Nie masz konta? <a href="#">Zarejestruj się</a>
+                </p>
+            </form>
+        </div>
     </div>
+
+    <!-- === SEKCJA OSI CZASU (początkowo ukryta) === -->
+    <div id="timeline-view" style="display: none;">
+        <header class="navbar">
+            <h1>Moje Wspomnienia</h1>
+            <!-- Zmieniony przycisk - po kliknięciu będzie pokazywał logowanie -->
+            <a href="#" id="logout-button">Wyloguj</a>
+        </header>
+
+        <main class="timeline-container">
+            <section class="upload-section">
+                <h2>Dodaj nowe wspomnienie</h2>
+                <form class="upload-form">
+                    <div class="form-group">
+                        <label for="photo-upload">Wybierz zdjęcie</label>
+                        <input type="file" id="photo-upload" name="photo-upload">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-date">Data wspomnienia</label>
+                        <input type="text" id="photo-date" name="photo-date" placeholder="np. 25 grudnia 2024">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo-description">Krótki opis</label>
+                        <textarea id="photo-description" name="photo-description" rows="3"></textarea>
+                    </div>
+                    <button type="submit">Dodaj zdjęcie</button>
+                </form>
+            </section>
+
+            <section class="timeline">
+                <h2>Twoja oś czasu</h2>
+                <div class="photo-card">
+                    <img src="https://via.placeholder.com/600x400.png?text=Wakacje+nad+morzem" alt="Zdjęcie z wakacji">
+                    <div class="card-content">
+                        <h3>20 lipca 2025</h3>
+                        <p>Nasz pierwszy dzień nad Bałtykiem. Pogoda była idealna!</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://via.placeholder.com/600x400.png?text=Wycieczka+w+góry" alt="Zdjęcie z gór">
+                    <div class="card-content">
+                        <h3>15 maja 2025</h3>
+                        <p>Zdobycie szczytu po długiej wędrówce. Widoki były niesamowite.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Dołączamy plik JavaScript na końcu body -->
+    <script src="app.js"></script>
 </body>
 </html>
