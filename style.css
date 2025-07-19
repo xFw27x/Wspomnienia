@@ -1,0 +1,149 @@
+/* --- Style globalne --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Style dla Paska Nawigacji (timeline.html) --- */
+.navbar {
+    background-color: #fff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #f0f2f5;
+}
+
+/* --- Główny kontener (dla obu stron) --- */
+.login-container, .timeline-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Stylizacja strony logowania (login.html) --- */
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* --- Stylizacja sekcji uploadu i formularzy (wspólne) --- */
+.upload-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ważne dla zachowania szerokości */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Stylizacja Osi Czasu i Kart Zdjęć (timeline.html) --- */
+.timeline {
+    text-align: center;
+}
+
+.photo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden; /* Ukrywa ostre rogi obrazka */
+    text-align: left;
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+}
+
+.photo-card .card-content {
+    padding: 20px;
+}
+
+.photo-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.photo-card p {
+    margin-bottom: 0;
+}
